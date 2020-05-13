@@ -26,3 +26,8 @@ column1 = dbc.Col(
 )
 
 layout = dbc.Row([column1])
+
+from liveshare import badass
+
+LetLets edit the MAKE CAPS line of code's edit the same line and delete
+
