@@ -1,1 +1,1 @@
-web: python gunicorn streetsmart_api/api:app
+web: gunicorn api:app
