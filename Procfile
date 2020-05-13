@@ -1,0 +1,1 @@
+web: gunicorn streetsmart_api:app

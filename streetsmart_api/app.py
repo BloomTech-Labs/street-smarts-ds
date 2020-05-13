@@ -1,5 +1,21 @@
-### I know somebody else created this but I'll add my 2 cents
+from flask import Flask, request
 
-## This is my 3 cents
+# Make app factory
+def api():
+    app = Flask(__name__)
 
-# Another co author test
+    @app.route("/")
+    def home():
+        return "Streetsmart dummy endpoint"
+
+    @app.route("/dummy", methods=['POST'])
+    def dummy():
+        req_data = request.get_json()
+
+        samp = req_data["dummy"]
+
+        output = {"success":samp}
+
+        return output
+    
+    return app
