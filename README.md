@@ -10,9 +10,8 @@ You can find the project at [🚫URL NAME GOES HERE](🚫copy and paste URL here
 |                                       [Will Stauffer-Norris](https://github.com/willstauffernorris)                                        |                                       [Mikio Harman](https://github.com/mpHarm88)                                        |                                       [Jon Nguyen](https://github.com/JonNData)                                        |                                                                           |
 
 |                         |   [<img src="https://avatars3.githubusercontent.com/u/30095633?s=460&u=394f507349eee136ae1beec2112436b13de9609a&v=4" width = "200" />](https://github.com/willstauffernorris)                       |                      [<img src="https://avatars3.githubusercontent.com/u/49764112?s=460&u=8ab39b1438191f5f94f11f1fb042154c3e54716a&v=4" width = "200" />](https://github.com/mpHarm88)                       |                      [<img src="https://avatars2.githubusercontent.com/u/59704644?s=460&u=63f5db90b599e70770504e2b86047dd91dc441e2&v=4" width = "200" />](https://github.com/JonNData)                       |
-|                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="30"> ](https://www.linkedin.com/in/willsn/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="30"> ](https://www.linkedin.com/in/jonathan-nguyen-94344b21/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
 
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="30"> ](https://www.linkedin.com/in/willsn/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="30"> ](https://www.linkedin.com/in/mikio-harman-6342a9195/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="30"> ](https://www.linkedin.com/in/jonathan-nguyen-94344b21/) 
 
 
 🚫 5️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
@@ -87,6 +86,27 @@ And more...
 ### 3️⃣ How to connect to the data API
 
 🚫 List directions on how to connect to the API here
+
+https://streetsmartdummy.herokuapp.com/pred
+
+Example Input:
+{
+	"make":"this is a test",
+	"model": "ford",
+	"year":1995,
+	"fuel_type":"gas",
+	"state":"CA",
+	"mileage":100
+}
+
+Example Output:
+{
+    "cost_to_own": -14698.94,
+    "predicted_CO2_emissions": 11,
+    "predicted_gas_cost": 4399.88,
+    "predicted_kWh": 205.37,
+    "predicted_price": -20000
+}
 
 ## Contributing
 
