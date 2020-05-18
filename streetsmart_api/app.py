@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
-from .modules import cost_to_own, get_car_price, get_CO2_values, gas_price, electric_price, get_gas_price, get_electric_price
+from .modules import *
 
 # Make app factory
 def api():
     app = Flask(__name__)
+    #app.config.from_object("config.Config")
 
     @app.route("/")
     def home():
@@ -46,5 +47,36 @@ def api():
             "predicted_kWh": get_electric_price(state),
             "predicted_gas_cost": get_gas_price(state)
         })
+    ## Endpoint 1: carbon emissions of vehicle
+    @app.route("/carbon_emissions", methods=['POST'])
+    def carbon():
+        data = request.get_json()
+
+        make  = data["make"]
+        model = data["model"]
+        year = data["year"]
+
+        output = get_CO2_values(make, model, year)
+
+        return jsonify({
+        "predicted_CO2_emissions": output
+        })
+
+
+    ##endpoint 2: cost of vehicle
+    @app.route("/price", methods=['POST'])
+    def price():
+        data = request.get_json()
+
+        make  = data["make"]
+        model = data["model"]
+        year = data["year"]
+
+        output = get_car_price(make, model, year)
+
+        return jsonify({
+        "predicted_price": output
+        })
+
      
     return app  

@@ -30,7 +30,7 @@ def cost_to_own(car_price):
 #print(cost_to_own(car_price))
 
 
-def get_car_price(make, model, year, state, mileage):
+def get_car_price(make, model, year):
     #This will be our sick machine learning model
     price = 30000 - ((2020 - year) * 2000 )
 
@@ -56,9 +56,14 @@ mileage = data["mileage"]
 
 ## We will need some error handling for mising values
 
-def get_CO2_values(make, model, year, fuel_type):
+def get_CO2_values(make, model, year):
     
-    return 11
+    ### The average vehicle emits 4.6 metric tons/year
+    ## This function is just a placeholder
+    emissions = 4.6 + ((2020 - year) * .25 )
+
+
+    return emissions
 
 
 def get_electric_price(state):
