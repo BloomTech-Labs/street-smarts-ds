@@ -8,7 +8,6 @@ name = os.environ["DB_NAME_AWS"]
 password = os.environ["DB_PW_AWS"]
 host = os.environ["DB_HOST_AWS"]
 user = os.environ["DB_USER_AWS"]
-port = os.environ["DB_PORT_AWS"]
 
 # Constants
 gas_price = 2.2087759717314484
@@ -74,8 +73,7 @@ def getCO2_using_SQL(make, model, year):
     pg_conn = psycopg2.connect(dbname=name,
                            user=user,
                            password=password,
-                           host=host,
-                           port=port
+                           host=host
                           )
     # Create cursor object
     pg_curs = pg_conn.cursor()
