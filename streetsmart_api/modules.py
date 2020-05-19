@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #Load credentials from .env
-name = os.getenv("DB_NAME_AWS")
-password = os.getenv("DB_PW_AWS")
-host = os.getenv("DB_HOST_AWS")
-user = os.getenv("DB_USER_AWS")
-port = os.getenv("DB_PORT_AWS")
+name = os.environ("DB_NAME_AWS")
+password = os.environ("DB_PW_AWS")
+host = os.environ("DB_HOST_AWS")
+user = os.environ("DB_USER_AWS")
+port = os.environ("DB_PORT_AWS")
 
 # Constants
 gas_price = 2.2087759717314484
