@@ -1,6 +1,15 @@
 from flask import Flask, request, jsonify
 from .modules import *
+import psycopg2
+import os
 from dotenv import load_dotenv
+load_dotenv()
+
+#Load credentials from .env
+name = os.environ["DB_NAME_AWS"]
+password = os.environ["DB_PW_AWS"]
+host = os.environ["DB_HOST_AWS"]
+user = os.environ["DB_USER_AWS"]
 
 
 # Make app factory
@@ -97,5 +106,30 @@ def api():
 
         aws_test = getCO2_using_SQL(make=make, model=model, year=year)
         return jsonify({"co2_tailpipe": aws_test})
-     
+
+
+    @app.route("/aws_test", methods=["POST"])    
+    def test_aws_3():
+        # Create connection to heroku database
+        pg_conn = psycopg2.connect(dbname=name,
+                            user=user,
+                            password=password,
+                            host=host
+                            )
+        # Create cursor object
+        pg_curs = pg_conn.cursor()
+
+        # Test to see if its possible to make a query to the database
+        pg_curs.execute(f"SELECT AVG(co2tailpipegpm) FROM epa_vehicles_all WHERE make = '{make}' AND model = '{model}' AND year = {year} ;")
+
+        #SELECT AVG(co2tailpipegpm) FROM epa_vehicles_all WHERE make = ‘Ford’ AND model = ‘Probe’ AND year = ‘1994’
+
+
+        tester = pg_curs.fetchall()[0]
+
+        pg_curs.close()
+        pg_conn.close()
+        return jsonify({"this is a test":tester})
+
+
     return app  
