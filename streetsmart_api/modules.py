@@ -1,3 +1,16 @@
+import psycopg2
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+#Load credentials from .env
+name = os.getenv("DB_NAME_AWS")
+password = os.getenv("DB_PW_AWS")
+host = os.getenv("DB_HOST_AWS")
+user = os.getenv("DB_USER_AWS")
+port = os.getenv("DB_PORT_AWS")
+
+# Constants
 gas_price = 2.2087759717314484
 electric_price = 0.103097091322717
 
@@ -52,6 +65,33 @@ year = data["year"]
 fuel_type = data["fuel_type"]
 state = data["state"]
 mileage = data["mileage"]
+
+
+def getCO2_using_SQL(make, model, year):
+
+    
+    # Create connection to heroku database
+    pg_conn = psycopg2.connect(dbname=name,
+                           user=user,
+                           password=password,
+                           host=host,
+                           port=port
+                          )
+    # Create cursor object
+    pg_curs = pg_conn.cursor()
+
+    # Test to see if its possible to make a query to the database
+    pg_curs.execute(f"SELECT AVG(co2tailpipegpm) FROM epa_vehicles_all WHERE make = '{make}' AND model = '{model}' AND year = {year} ;")
+
+    #SELECT AVG(co2tailpipegpm) FROM epa_vehicles_all WHERE make = ‘Ford’ AND model = ‘Probe’ AND year = ‘1994’
+
+
+    tester = pg_curs.fetchall()[0]
+
+    pg_curs.close()
+    pg_conn.close()
+
+    return tester
 
 
 ## We will need some error handling for mising values

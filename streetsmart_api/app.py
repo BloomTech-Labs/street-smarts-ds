@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from .modules import *
+from dotenv import load_dotenv
+
 
 # Make app factory
 def api():
@@ -48,19 +50,19 @@ def api():
             "predicted_gas_cost": get_gas_price(state)
         })
     ## Endpoint 1: carbon emissions of vehicle
-    @app.route("/carbon_emissions", methods=['POST'])
-    def carbon():
-        data = request.get_json()
+    # @app.route("/carbon_emissions", methods=['POST'])
+    # def carbon():
+    #     data = request.get_json()
 
-        make  = data["make"]
-        model = data["model"]
-        year = data["year"]
+    #     make  = data["make"]
+    #     model = data["model"]
+    #     year = data["year"]
 
-        output = get_CO2_values(make, model, year)
+    #     output = get_CO2_values(make, model, year)
 
-        return jsonify({
-        "predicted_CO2_emissions": output
-        })
+    #     return jsonify({
+    #     "predicted_CO2_emissions": output
+    #     })
 
 
     ##endpoint 2: cost of vehicle
@@ -78,5 +80,22 @@ def api():
         "predicted_price": output
         })
 
+    @app.route("/tester", methods=["GET"])
+    def test_aws():
+        aws_test = test()
+        return {"aws_test": aws_test}
+
+    @app.route("/carbon_emissions", methods=["POST"])
+    def test_aws2():
+
+        data = request.get_json()
+
+        make  = data["make"]
+        model = data["model"]
+        year = data["year"]
+
+
+        aws_test = getCO2_using_SQL(make=make, model=model, year=year)
+        return jsonify({"co2_tailpipe": aws_test})
      
     return app  
