@@ -2,7 +2,7 @@
 
 # Street Smarts #
 
-You can find the project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+You can find the project at [STREETSMARTS](http://www.streetsmarts.online).
 ### We don't have URL set up yet ###
 
 ## Contributors
