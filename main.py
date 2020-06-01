@@ -119,7 +119,7 @@ def predict(make:str="Ford", model:str="F150 Pickup 4WD", year:int=2005):
 
     ## Need to query the EPA database to determine fuel type
 
-    ## IF gas:
+    ## If gas:
     fuel_cost +
     
     ## IF electric
