@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 import pandas as pd
 from fuzzywuzzy import fuzz, process
 from joblib import load
-
+import requests
+import numpy as np
 
 load_dotenv()
 
@@ -131,6 +132,65 @@ def predict(make:str="Ford", model:str="F150 Pickup 4WD", year:int=2005):
     ## Number of kgs of CO2 absorbed by one tree per year
     tree_absorption = 21.7724
     number_of_trees_to_offset = co2_over_time/(tree_absorption*num_years)
+    
+    #### Images of Selected Car
+
+    def test_get_list_urls_check_status_code_equals_200(url):
+        response = requests.get(url)
+        if response.status_code == 200:
+            url = url
+        else:
+            return np.NaN
+        return url
+    def fetch_img(car_model, year):
+        """
+        Get from sample input car to return the url. If none found,
+        check next and previous year. If none available, give none found image
+        """
+        df_models = df_cl[df_cl['model'] == car_model]
+        df_models_at_year = df_models[df_models['year'] == year ]
+        index_of_model_year = df_models_at_year.index[0:10]
+
+        list_urls = list(df_cl['image_url'][index_of_model_year])
+        ##for loop
+        list_nan_urls = [test_get_list_urls_check_status_code_equals_200(x) for x in list_urls]
+        print(list_nan_urls)
+        clean_list_urls = [x for x in list_nan_urls if x is not np.NaN]
+        print(clean_list_urls, 'current year')            
+
+        # Check if there are any cars in the current year, else check next year
+        if len(clean_list_urls) == 0:
+            df_models_at_year = df_models[df_models['year'] == (year + 1)]
+            index_of_model_year = df_models_at_year.index[0:10]
+            list_urls = list(df_cl['image_url'][index_of_model_year])
+            ##for loop
+            list_nan_urls = [test_get_list_urls_check_status_code_equals_200(x) for x in list_urls]
+            print(list_nan_urls)
+            clean_list_urls = [x for x in list_nan_urls if x is not np.NaN]
+            print(clean_list_urls, 'next year')
+
+            # if there are any cars in the current year, else check PREV year
+            if len(clean_list_urls) == 0:
+                df_models_at_year = df_models[df_models['year'] == (year - 1)]
+                index_of_model_year = df_models_at_year.index[0:10]
+                list_urls = list(df_cl['image_url'][index_of_model_year])
+                #print('No cars in specified year, trying the previous year')  
+                ##for loop
+                list_nan_urls = [test_get_list_urls_check_status_code_equals_200(x) for x in list_urls]
+                print(list_nan_urls)
+                clean_list_urls = [x for x in list_nan_urls if x is not np.NaN]
+                print(clean_list_urls, 'previous year')
+
+                if len(clean_list_urls) == 0:
+                    return ['https://raw.githubusercontent.com/Lambda-School-Labs/street-smarts-ds/master/data/noImage_large.png']
+                return clean_list_urls  
+
+            #print('No cars in specified year, trying the next year')
+            return clean_list_urls
+
+        return clean_list_urls
+      
+    list_of_imgs = fetch_img(model_fz, year)
 
     return {"car_price_prediction": car_price_prediction.round(2),
             "fuel_cost": round(fuel_cost, 2),
