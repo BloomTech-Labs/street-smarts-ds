@@ -16,9 +16,12 @@ You can find the project at [streetsmarts.online](www.streetsmarts.online).
 🚫 5️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
-![Typescript](https://img.shields.io/npm/types/typescript.svg?style=flat)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5c4db1c-b10d-42c3-b157-3746edd9e81d/deploy-status)](netlify link goes in these parenthesis)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![Python](https://img.shields.io/badge/python-v3.7-blue)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.22-orange)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.55.1-blue)
+![FuzzyWuzzy](https://img.shields.io/badge/RapidFuzz-0.9.1-blueviolet)
+![Pandas](https://img.shields.io/badge/Pandas-1.0.4-green)
+![Heroku](https://img.shields.io/badge/Heroku-10-blueviolet)
 
 🚫 more info on using badges [here](https://github.com/badges/shields)
 
@@ -35,30 +38,55 @@ We use deep learning in our state-of-the-art machine learning model to predict c
 
 Unlike the dealers, we also display the carbon emissions for your car, so you can make a responsible purchase.
 
-🚫  delete if front end is not applicable to your project
-
-1️⃣ [Deployed Front End](🚫add link to deployed app here)
-
-### No link yet ###
+1️⃣ [Deployed Front End](www.streetsmarts.online)
 
 ### Tech Stack
 
-Python
-Heroku
-SciKit Learn
-And more...
+- [Python](https://www.python.org/)
+- [Heroku](https://signup.heroku.com/t/platform?c=70130000001xDpdAAE&gclid=Cj0KCQjwiYL3BRDVARIsAF9E4GfSpj6ILAdSsgB8lle2cKVF_KAiQEfWAwEczYAHzpZtkf-nu9K7sgAaAgYVEALw_wcB)
+- [SciKit Learn](https://scikit-learn.org/stable/)
+- [Fast API](https://fastapi.tiangolo.com/)
+- [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
+- [AWS Relational Databse Service](https://aws.amazon.com/rds/)
 
 ### 2️⃣ Predictions
+```javascript
+# Input 
 
-🚫 Describe your models here
+{
+'make': 'Ford',
+'model': 'F150 Pickup 4WD'
+'year': 2005
+}
+```
+
+
+```javascript
+# Outputting Route
+
+{
+  "car_price_prediction": 30655.23,
+  "fuel_cost": 16071.43,
+  "maintenance_cost": 1000,
+  "five_year_cost_to_own": 47726.66,
+  "co2_five_year_kgs": 47608.93,
+  "number_of_trees_to_offset": 437,
+  "list_of_imgs": [
+    "https://images.craigslist.org/00l0l_aZwW2Ok8T8T_600x450.jpg",
+    "https://images.craigslist.org/00l0l_aZwW2Ok8T8T_600x450.jpg"
+  ]
+}
+```
 
 ### 2️⃣ Explanatory Variables
 
--   Explanatory Variable 1
--   Explanatory Variable 2
--   Explanatory Variable 3
--   Explanatory Variable 4
--   Explanatory Variable 5
+1. Model
+	* This is the model of the vehicle.
+2. Make
+	* This is the make of the vehicle.
+3. Year
+	* The year of the vehicle.
+
 
 ### Data Sources
 🚫  Add to or delete souce links as needed for your project
