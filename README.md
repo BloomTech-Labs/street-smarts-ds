@@ -2,7 +2,8 @@
 
 # Street Smarts #
 
-You can find the project at [STREETSMARTS](http://www.streetsmarts.online).
+You can find the project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+### We don't have URL set up yet ###
 
 ## Contributors
 
@@ -37,7 +38,9 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 
 🚫  delete if front end is not applicable to your project
 
-1️⃣ [Deployed Front End](http://www.streetsmarts.online)
+1️⃣ [Deployed Front End](🚫add link to deployed app here)
+
+### No link yet ###
 
 ### Tech Stack
 
@@ -63,7 +66,7 @@ And more...
 
 
 -   [EPA Fuel Economy dataset] (https://www.fueleconomy.gov/feg/ws/index.shtml#vehicle)
--   [Craigslist Used Car dataset] (https://www.kaggle.com/austinreese/craigslist-carstrucks-data)
+-   [Source 2] (🚫add link to python notebook here)
 
 
 ### Python Notebooks

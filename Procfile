@@ -1,1 +1,1 @@
-web: gunicorn streetsmart_api:app
+web: gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker
