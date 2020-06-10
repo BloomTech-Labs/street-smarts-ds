@@ -4,8 +4,22 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-
+ 
 [packages]
+fastapi = "*"
+uvicorn = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+python-dotenv = "*"
+awsebcli = "*"
+pandas = "*"
+category-encoders = "*"
+scikit-learn = "==0.22.2.post1"
+fuzzywuzzy = "*"
+joblib = "*"
+python-levenshtein = "*"
+requests = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
