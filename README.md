@@ -114,6 +114,13 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 
 🚫 List directions on how to connect to the API here
 
+Our initial release canvases included a Flask API with dummy endpoints to Heroku, hosting a database on there as well.  
+  
+To access the version of the repo that was deployed to Heroku:  
+clone the repo     
+access our commit with:    
+`git checkout 1ff857091d07a4e13455aeba0e7bc4b0137434be`  
+
 https://streetsmartdummy.herokuapp.com/pred
 
 Example Input:
