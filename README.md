@@ -156,7 +156,8 @@ make: str='Ford',
 model: str='F150 Pickup 4WD',
 year: int=2005,
 odometer: int=99999
-}```
+}
+```
 
 Output:  
 ```
@@ -173,7 +174,8 @@ Output:
   "list_of_imgs": [
     "https://images.craigslist.org/00E0E_av8sHn7jwty_600x450.jpg"
   ]
-}```
+}
+```
 
 ## Contributing
 
