@@ -112,7 +112,6 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 
 ### 3️⃣ How to connect to the data API
 
-🚫 List directions on how to connect to the API here
 
 Our initial release canvases included a Flask API with dummy endpoints to Heroku, hosting a database on there as well.  
   
@@ -141,6 +140,31 @@ Example Output:
     "predicted_kWh": 205.37,
     "predicted_price": -20000
 }
+
+
+Our current api has an easily accessed docs at  
+
+http://data.streetsmarts.online/docs
+
+Input:
+[miles
+
+Output:  
+`miles_per_year
+{
+  "car_price_prediction": 30655.23,
+  "fuel_cost": 16071.43,
+  "maintenance_cost": 1000,
+  "five_year_cost_to_own": 47726.66,
+  "co2_five_year_kgs": 47608.93,
+  "number_of_trees_to_offset": 437,
+  "trees_burned_emoji": [
+    "🔥🔥🔥🔥🌲🌲🌲🌲🌲🌲"
+  ],
+  "list_of_imgs": [
+    "https://images.craigslist.org/00E0E_av8sHn7jwty_600x450.jpg"
+  ]
+}`
 
 ## Contributing
 
