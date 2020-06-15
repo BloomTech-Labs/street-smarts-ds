@@ -13,8 +13,6 @@ You can find the project at [streetsmarts.online](www.streetsmarts.online).
 | [<img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/willsn/) | [<img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jonathan-nguyen-94344b21/)                                       | [<img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/mikio-harman-6342a9195/)                            |
 
 
-🚫 5️⃣ Optional examples of using images with links for your tech stack, make sure to change these to fit your project
-
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![Python](https://img.shields.io/badge/python-v3.7-blue)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.22-orange)
@@ -23,14 +21,14 @@ You can find the project at [streetsmarts.online](www.streetsmarts.online).
 ![Pandas](https://img.shields.io/badge/Pandas-1.0.4-green)
 ![Heroku](https://img.shields.io/badge/Heroku-10-blueviolet)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+More info on using badges [here](https://github.com/badges/shields)
 
 ## Project Overview
 
 
-1️⃣ [Trello Board](https://trello.com/b/B5GkoOPo/labs-24-street-smarts)
+[Trello Board](https://trello.com/b/B5GkoOPo/labs-24-street-smarts)
 
-1️⃣ [Product Canvas](https://www.notion.so/Street-Smarts-Automotive-Data-5450e77cf0c44a218a4aa6d67ce889eb)
+[Product Canvas](https://www.notion.so/Street-Smarts-Automotive-Data-5450e77cf0c44a218a4aa6d67ce889eb)
 
 Street Smarts helps you discover the value and carbon emissions of your car, and compare it to other cars.
 
@@ -38,7 +36,7 @@ We use deep learning in our state-of-the-art machine learning model to predict c
 
 Unlike the dealers, we also display the carbon emissions for your car, so you can make a responsible purchase.
 
-1️⃣ [Deployed Front End](www.streetsmarts.online)
+[Deployed Front End](www.streetsmarts.online)
 
 ### Tech Stack
 
@@ -49,7 +47,7 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 - [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 - [AWS Relational Databse Service](https://aws.amazon.com/rds/)
 
-### 2️⃣ Predictions
+### Predictions
 ```javascript
 # Input 
 
@@ -78,7 +76,7 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 }
 ```
 
-### 2️⃣ Explanatory Variables
+### Explanatory Variables
 
 1. Model
 	* This is the model of the vehicle.
@@ -89,28 +87,26 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 
 
 ### Data Sources
-🚫  Add to or delete souce links as needed for your project
-
 
 -   [EPA Fuel Economy dataset] (https://www.fueleconomy.gov/feg/ws/index.shtml#vehicle)
--   [Source 2] (🚫add link to python notebook here)
+
+-   [Craigslist Dataset] (https://www.kaggle.com/austinreese/craigslist-carstrucks-data)
 
 
 ### Python Notebooks
 
-🚫  Add to or delete python notebook links as needed for your project
+[Official_大_Data_ 🧮_Cleaning_🧹_Notebook_📓](https://github.com/Lambda-School-Labs/street-smarts-ds/blob/master/notebooks/Official_%E5%A4%A7_Data_%20%F0%9F%A7%AE_Cleaning_%F0%9F%A7%B9_Notebook_%F0%9F%93%93.ipynb)
 
-[Python Notebook 1](🚫add link to python notebook here)
+[SQL](https://github.com/Lambda-School-Labs/street-smarts-ds/blob/master/notebooks/sql.ipynb)
 
-[Python Notebook 2](🚫add link to python notebook here)
+[Plotly Dash App Data Viz 📉](https://github.com/Lambda-School-Labs/street-smarts-ds/blob/master/notebooks/Plotly%20Dash%20App%20Data%20Viz%20%F0%9F%93%89.ipynb)
 
-[Python Notebook 3](🚫add link to python notebook here)
+[streetsmart_EPA_vehicles_EDA](https://github.com/Lambda-School-Labs/street-smarts-ds/blob/master/notebooks/streetsmart_EPA_vehicles_EDA.ipynb)
 
-### 3️⃣ How to connect to the web API
+[official_streetsmarts_pytest](https://github.com/Lambda-School-Labs/street-smarts-ds/blob/master/notebooks/official_streetsmarts_pytest.ipynb)
 
-🚫 List directions on how to connect to the API here
 
-### 3️⃣ How to connect to the data API
+### How to connect to the data API
 
 
 Our initial release canvases included a Flask API with dummy endpoints to Heroku, hosting a database on there as well.  
@@ -147,10 +143,20 @@ Our current api has an easily accessed docs at
 http://data.streetsmarts.online/docs
 
 Input:
-[miles
+`{
+miles_per_year: int = 15000,
+num_years: int = 5,
+gas_cost: int = 3,
+electrical_cost: float = 0.12,
+maintenance_cost_per_year: int = 1000,
+make: str='Ford',
+model: str='F150 Pickup 4WD',
+year: int=2005,
+odometer: int=99999
+}`
 
 Output:  
-`miles_per_year
+`
 {
   "car_price_prediction": 30655.23,
   "fuel_cost": 16071.43,
@@ -204,6 +210,6 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](_link to your backend readme here_) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/street-smarts-be) for details on the backend of our project.
 
-See [Front End Documentation](_link to your front end readme here_) for details on the front end of our project.
+See [Front End Documentation](https://github.com/Lambda-School-Labs/street-smarts-fe) for details on the front end of our project.
