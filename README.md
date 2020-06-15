@@ -127,7 +127,8 @@ Example Input:
 	"fuel_type":"gas",
 	"state":"CA",
 	"mileage":100
-}```
+}
+```
 
 Example Output:
 ```
