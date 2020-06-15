@@ -88,9 +88,9 @@ Unlike the dealers, we also display the carbon emissions for your car, so you ca
 
 ### Data Sources
 
--   [EPA Fuel Economy dataset] (https://www.fueleconomy.gov/feg/ws/index.shtml#vehicle)
+-   [EPA Fuel Economy dataset](https://www.fueleconomy.gov/feg/ws/index.shtml#vehicle)
 
--   [Craigslist Dataset] (https://www.kaggle.com/austinreese/craigslist-carstrucks-data)
+-   [Craigslist Dataset](https://www.kaggle.com/austinreese/craigslist-carstrucks-data)
 
 
 ### Python Notebooks
@@ -119,6 +119,7 @@ access our commit with:
 https://streetsmartdummy.herokuapp.com/pred
 
 Example Input:
+```
 {
 	"make":"this is a test",
 	"model": "ford",
@@ -126,9 +127,10 @@ Example Input:
 	"fuel_type":"gas",
 	"state":"CA",
 	"mileage":100
-}
+}```
 
 Example Output:
+```
 {
     "cost_to_own": -14698.94,
     "predicted_CO2_emissions": 11,
@@ -136,14 +138,14 @@ Example Output:
     "predicted_kWh": 205.37,
     "predicted_price": -20000
 }
+```
 
-
-Our current api has an easily accessed docs at  
+Our current FAST api is deployed on AWS with  easily accessed docs at:  
 
 http://data.streetsmarts.online/docs
 
 Input:
-`{
+```{
 miles_per_year: int = 15000,
 num_years: int = 5,
 gas_cost: int = 3,
@@ -153,10 +155,10 @@ make: str='Ford',
 model: str='F150 Pickup 4WD',
 year: int=2005,
 odometer: int=99999
-}`
+}```
 
 Output:  
-`
+```
 {
   "car_price_prediction": 30655.23,
   "fuel_cost": 16071.43,
@@ -170,7 +172,7 @@ Output:
   "list_of_imgs": [
     "https://images.craigslist.org/00E0E_av8sHn7jwty_600x450.jpg"
   ]
-}`
+}```
 
 ## Contributing
 
