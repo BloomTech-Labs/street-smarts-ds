@@ -4,6 +4,8 @@
 
 You can find the project at [streetsmarts.online](www.streetsmarts.online).
 
+[streetsmartsgif](https://raw.githubusercontent.com/willstauffernorris/willstauffernorris.github.io/master/img/streetsmartsgiphy.gif)   
+
 ## Contributors
 
 | [Will Stauffer-Norris](https://github.com/willstauffernorris)                                                                                 | [Jon Nguyen](https://github.com/JonNData)                                                                                                                         | [Mikio Harman](https://github.com/mpHarm88)                                                                                                                       |
